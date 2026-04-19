@@ -6,11 +6,12 @@ Tugas 3
 ---
 
 # Dokumentasi
-| Keterangan      | Screenshot                                           |
-| :---            |     :---:                                            |
-| ProductPHP      | ![ProductPHP](./Praktikum3/ProductPHP.png)           |
-| CategoryPHP     | ![CategoryPHP](./Praktikum3/CategoryPHP.png)         |
-| CategoriesTable | ![CategoriesTable](./Praktikum3/CategoriesTable.png) |
-| ProductTable    | ![ProductTable](./Praktikum3/ProductTable.png)       |
-| CategoriesDB    | ![CategoriesDB](./Praktikum3/CategoriesDB.png)       |
-| ProductsDB      | ![ProductsDB](./Praktikum3/ProductsDB.png)           |
+| Keterangan      | Screenshot                                |
+| :---            |     :---:                                 |
+| ProductPHP      | ![ProductPHP](./ProductPHP.png)           |
+| CategoryPHP     | ![CategoryPHP](./CategoryPHP.png)         |
+| CategoriesTable | ![CategoriesTable](./CategoriesTable.png) |
+| ProductTable    | ![ProductTable](./ProductTable.png)       |
+| CategoriesDB    | ![CategoriesDB](./CategoriesDB.png)       |
+| ProductsDB      | ![ProductsDB](./ProductsDB.png)           |
+| ERD             | ![ERD](./ERD.png)                         |
