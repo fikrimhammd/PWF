@@ -20,6 +20,18 @@
                     <x-nav-link :href="route('about')" :active="request()->routeIs('about')">
                         {{ __('Tentang Saya') }}
                     </x-nav-link>
+
+                    <!-- Tambahan Link Product -->
+                    <x-nav-link :href="route('products.index')" :active="request()->routeIs('products.*')">
+                        {{ __('Product') }}
+                    </x-nav-link>
+
+                    <!-- Tambahan Link Category -->
+                    @can('manage-category')
+                    <x-nav-link :href="route('categories.index')" :active="request()->routeIs('categories.*')">
+                        {{ __('Category') }}
+                    </x-nav-link>
+                    @endcan
                 </div>
             </div>
 
@@ -28,7 +40,7 @@
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 dark:text-gray-400 bg-white dark:bg-gray-800 hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
-                            <div>{{ Auth::user()->name }}</div>
+                            <div>{{ Auth::user()->name }} ({{ strtoupper(Auth::user()->role) }})</div>
 
                             <div class="ms-1">
                                 <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -80,6 +92,18 @@
             <x-responsive-nav-link :href="route('about')" :active="request()->routeIs('about')">
                 {{ __('Tentang Saya') }}
             </x-responsive-nav-link>
+
+            <!-- Tambahan Link Product untuk Mobile -->
+            <x-responsive-nav-link :href="route('products.index')" :active="request()->routeIs('products.*')">
+                {{ __('Product') }}
+            </x-responsive-nav-link>
+
+            <!-- Tambahan Link Category untuk Mobile -->
+            @can('manage-category')
+            <x-responsive-nav-link :href="route('categories.index')" :active="request()->routeIs('categories.*')">
+                {{ __('Category') }}
+            </x-responsive-nav-link>
+            @endcan
         </div>
 
         <!-- Responsive Settings Options -->

@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Gate;
+use App\Models\User;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -19,6 +21,17 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        Gate::define('export-product', function (User $user) {
+            return $user->role === 'admin';
+        });
+
+        // Optional: manage-product for General requirements
+        Gate::define('manage-product', function (User $user) {
+            return $user->role === 'admin';
+        });
+
+        Gate::define('manage-category', function (User $user) {
+            return $user->role === 'admin';
+        });
     }
 }

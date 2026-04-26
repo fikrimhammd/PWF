@@ -10,6 +10,7 @@ class Product extends Model
 {
     protected $fillable = [
         'user_id',
+        'category_id',
         'name', 
         'qty',
         'price'
@@ -21,9 +22,9 @@ class Product extends Model
         return $this->belongsTo(User::class);
     }
 
-    // Relasi ke Category (Product punya banyak Category)
-    public function categories(): HasMany
+    // Relasi ke Category (Product belongs to Category)
+    public function category(): BelongsTo
     {
-        return $this->hasMany(Category::class);
+        return $this->belongsTo(Category::class);
     }
 }
