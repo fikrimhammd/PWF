@@ -6,6 +6,6 @@ Tugas 7
 ---
 
 # Dokumentasi
-| Keterangan      | Screenshot                                |
-| :---            |     :---:                                 |
-| ProductView      | ![ProductView](./ProductView.png)        |
+| Keterangan      | Screenshot                               |
+| :---            |     :---:                                |
+| ProductView     | ![ProductView](./ProductView.png)        |
